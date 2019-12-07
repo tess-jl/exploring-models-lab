@@ -3,14 +3,6 @@ const app = require('../lib/app');
 require('../lib/utils/connect.js')();
 
 describe('application routes', () => {
-  // it('has a post route that posts things', () => {
-  //   return request(app)
-  //     .get('/')
-  //     .then(res => {
-  //       expect(res.body).toEqual({ text: 'hello' });
-  //     });
-  // });
-
   it('has a /postRoute post route', () => {
     return request(app)
       .post('/postRoute')
@@ -31,6 +23,21 @@ describe('application routes', () => {
           branches: 3, 
           trunk: 'not chopped down'
         });
+      });
+  });
+    
+  it('has a get route that gets things', () => {
+    return request(app)
+    //copy pasted the id from the compass monogo db interface
+      .get('/5deae0345b12221e7e85e1a9')
+      .then(res => {
+        expect(res.body).toEqual({  '__v': 0,
+          '_id': '5deae0345b12221e7e85e1a9',
+          'branches': 3,
+          'leaves': 300,
+          'name': 'maple',
+          'roots': 300,
+          'trunk': 'not chopped down', });
       });
   });
 });
