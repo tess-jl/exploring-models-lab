@@ -17,7 +17,6 @@ describe('application routes', () => {
       })
       .then(res => {
         _id = res.body._id;
-        console.log(_id, 'this is the _iddddd');
         expect(res.body).toEqual({
           '__v': 0,
           '_id': expect.any(String),
@@ -64,21 +63,19 @@ describe('application routes', () => {
       });
   });
 
-  // it('has a delete route that deletes things', () => {
-  //   return request(app)
-  //     .get(`/${_id}`)
-  //     .send({
-  //       name: 'elm'
-  //     })
-  //     .then(res => {
-  //       expect(res.body).toEqual({  
-  //         '__v': 0,
-  //         '_id': `${_id}`,
-  //         'branches': 3,
-  //         'leaves': 300,
-  //         'name': 'maple',
-  //         'roots': 300,
-  //         'trunk': 'not chopped down', });
-  //     });
-  // });
+  it('has a delete route that deletes things', () => {
+    return request(app)
+      .get(`/${_id}`)
+      .then(res => {
+        expect(res.body).toEqual({  
+          '__v': 0,
+          '_id': `${_id}`,
+          'branches': 3,
+          'leaves': 300,
+          'name': 'maple',
+          'roots': 300,
+          'trunk': 'not chopped down', 
+        });
+      });
+  });
 });
