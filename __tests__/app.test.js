@@ -40,4 +40,21 @@ describe('application routes', () => {
           'trunk': 'not chopped down', });
       });
   });
+
+  it('has an update route that updates things', () => {
+    return request(app)
+      .get('/5deae0345b12221e7e85e1a9')
+      .send({
+        name: 'elm'
+      })
+      .then(res => {
+        expect(res.body).toEqual({  '__v': 0,
+          '_id': '5deae0345b12221e7e85e1a9',
+          'branches': 3,
+          'leaves': 300,
+          'name': 'maple',
+          'roots': 300,
+          'trunk': 'not chopped down', });
+      });
+  });
 });
