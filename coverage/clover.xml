@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1575678602278" clover="3.2.0">
-  <project timestamp="1575678602278" name="All files">
-    <metrics statements="28" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="6" elements="37" coveredelements="30" complexity="0" loc="28" ncloc="28" packages="3" files="3" classes="3"/>
+<coverage generated="1575680793037" clover="3.2.0">
+  <project timestamp="1575680793037" name="All files">
+    <metrics statements="30" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="6" elements="41" coveredelements="31" complexity="0" loc="30" ncloc="30" packages="3" files="3" classes="3"/>
     <package name="lib">
-      <metrics statements="17" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
+      <metrics statements="19" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="4"/>
       <file name="app.js" path="/Users/Tess/alchemy/career-track/week-01/exploring-models-lab/lib/app.js">
-        <metrics statements="17" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
+        <metrics statements="19" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -21,8 +21,10 @@
         <line num="34" count="1" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
       </file>
     </package>
     <package name="lib.models">
