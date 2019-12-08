@@ -29,9 +29,8 @@ describe('application routes', () => {
       });
   });
     
-  it('has a get route that gets things', () => {
+  it('has a get route that gets one thing', () => {
     return request(app)
-    //copy pasted the id from the compass monogo db interface
       .get(`/${_id}`)
       .then(res => {
         expect(res.body).toEqual({  
@@ -44,6 +43,20 @@ describe('application routes', () => {
           'trunk': 'not chopped down', });
       });
   });
+  // it('has a get route that gets all the things in the collection', () => {
+  //   return request(app)
+  //     .get('/getAllRoute')
+  //     .then(res => {
+  //       expect(res.body).toEqual({  
+  //         '__v': 0,
+  //         '_id': `${_id}`,
+  //         'branches': 3,
+  //         'leaves': 300,
+  //         'name': 'maple',
+  //         'roots': 300,
+  //         'trunk': 'not chopped down', });
+  //     });
+  // });
 
   it('has an update route that updates things', () => {
     return request(app)
