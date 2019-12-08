@@ -1,4 +1,4 @@
-require('./lib/utils/connect.js')();
+require('./lib/utils/connect.js').connect();
 require('dotenv').config();
 
 //our server makes queries to db, mongo db sends data back 
